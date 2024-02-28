@@ -85,53 +85,63 @@ struct SettingsView: View {
                             Cell(action: { self.controller.selectedSound = .hiHat }, name: .hiHat, currentlySelectedSound: controller.selectedSound).font(.headline).foregroundColor(Color("text"))
                         }
                     }
-                }
-                .padding(.leading, 30)
-                .padding(.trailing, 15)
-			
-				Line()
-					.rotation(Angle(degrees: 90))
-					.stroke(style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-					.frame(width: 2)
-					.foregroundColor(.white)
-					.padding(.top, 10)
-					.padding(.bottom, 80)
+				
+					
+					Line()
+						.rotation(Angle(degrees: 90))
+						.stroke(style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+						.frame(width: 2)
+						.foregroundColor(.white)
+
+					HStack {
+						Text("About")
+							.font(.largeTitle)
+							.foregroundColor(Color("text"))
+							.padding(.leading, -15)
+							.bold()
+						Spacer()
+					}
+				
+					VStack(alignment: .leading){
+							Text("Just a small open-source Project!")
+								.foregroundColor(Color("text"))
+								.font(.headline)
+								.padding(.bottom, 10)
+								.padding(.top, 10)
+
+							Text("https://github.com/Alpagga/SwiftMetronom")
+								.foregroundColor(Color("text"))
+								.font(.headline)
+								.padding(.bottom, 10)
+							
+							Text("Go Steal the Code and Have Fun!")
+								.foregroundColor(Color("text"))
+								.font(.headline)
+								.padding(.bottom, 10)
+					}
+				
+					Line()
+						.rotation(Angle(degrees: 90))
+						.stroke(style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+						.frame(width: 2)
+						.foregroundColor(.white)
 				
 				HStack {
-					Text("About")
+					Text("Jo Tim Waddup?")
 						.font(.largeTitle)
 						.foregroundColor(Color("text"))
-						.padding(.leading, 15)
+						.padding(.leading, -15)
 						.bold()
 					Spacer()
 				}
-			
-				VStack(alignment: .leading){
-						Text("Just a small open-source Project!")
-							.foregroundColor(Color("text"))
-							.font(.headline)
-							.padding(.leading, 30)
-							.padding(.trailing, 15)
-							.padding(.bottom, 10)
-							.padding(.top, 30)
-
-						Text("https://github.com/Alpagga/SwiftMetronom")
-							.foregroundColor(Color("text"))
-							.font(.headline)
-							.padding(.leading, 30)
-							.padding(.trailing, 15)
-							.padding(.bottom, 10)
-						
-						Text("Go Steal the Code and Have Fun!")
-							.foregroundColor(Color("text"))
-							.font(.headline)
-							.padding(.leading, 30)
-							.padding(.trailing, 15)
-							.padding(.bottom, 10)
-				}.padding(.top, 150)
-
+				
+                }
+                .padding(.leading, 30)
+                .padding(.trailing, 15)
+			Spacer()
             }
             .frame(alignment: .topLeading)
+
         }
     }
 

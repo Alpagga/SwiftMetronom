@@ -14,8 +14,6 @@ struct TopControlsBar: View {
     var body: some View {
         HStack {
             
-            Spacer()
-            
             Button(action: {
                 self.tapTimeStamps.removeAll()
                 self.isShowingSettingsView = true
@@ -27,6 +25,8 @@ struct TopControlsBar: View {
                 .frame(width: 70, height: 70)
                 .hoverEffect(.highlight)
                 .padding(.horizontal, 5)
+            
+            Spacer()
        }
     }
     func startCounter() {

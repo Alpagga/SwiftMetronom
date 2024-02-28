@@ -16,23 +16,32 @@ struct BottomControlsBar: View {
     var body: some View {
         
         HStack{
+            Spacer()
             Text("\(counter2)")
                 .font(Font.custom("Futura", size: 70))
                 .foregroundColor(Color("text"))
                 .accessibility(label: Text("Current Counter: \(counter2)"))
-                .frame(width: 70, alignment: .leading)
+                .frame(width: 60, alignment: .trailing)
+            
+            Text(":")
+                .font(Font.custom("Futura", size: 70))
+                .foregroundColor(Color("text"))
+                .accessibility(label: Text("Current Counter: \(counter2)"))
+                .frame(width: 20, alignment: .leading)
             
             Text("\(counter)")
                 .font(Font.custom("Futura", size: 70))
                 .foregroundColor(Color("text"))
                 .accessibility(label: Text("Current Counter: \(counter)"))
-                .frame(width: 70, alignment: .leading)
+                .frame(width: 60, alignment: .leading)
+            
             
             Text("\(controller.bpm)")
                 .font(Font.custom("Futura", size: 70))
                 .foregroundColor(Color("text"))
                 .accessibility(label: Text("Current bpm: \(controller.bpm)"))
                 .frame(width: 140 , alignment: .trailing)
+            Spacer()
         }
         
         HStack {
@@ -45,8 +54,7 @@ struct BottomControlsBar: View {
                 .accessibility(label: Text("minus 1 bpm"))
                 .padding(12)
                 .hoverEffect(.highlight)
-            
-            
+                .frame(width: 70, height: 110)
             
             Button(action: {
                 if self.controller.isPlaying {
@@ -72,10 +80,9 @@ struct BottomControlsBar: View {
             .buttonStyle(CustomButtonStyle(size: 80))
             .font(.system(size: 55))
             .accessibility(label: controller.isPlaying ? Text("pause") : Text("play"))
-            .frame(width: 110, height: 110)
+            .frame(width: 140, height: 110)
             .hoverEffect(.highlight)
-            
-            
+        
             
             Button(action: {
                 self.controller.setBPM(self.controller.bpm + 1)
@@ -85,7 +92,9 @@ struct BottomControlsBar: View {
                 .accessibility(label: Text("plus 1 bpm"))
                 .padding(12)
                 .hoverEffect(.highlight)
-        }
+                .frame(width: 70, height: 110)
+            }
+
     }
     
     
@@ -96,7 +105,7 @@ struct BottomControlsBar: View {
            
         timer = Timer.scheduledTimer(withTimeInterval: 60 * 4 / Double(controller.bpm), repeats: true) { _ in
             if counter % 4 == 0 && counter != 0{
-                self.counter = 0
+                self.counter = 1
             } else {
                 self.counter += 1
             }

@@ -16,70 +16,71 @@ struct BPMSlider: View {
     @State private var shouldRespondToPublisher = true
     
     var body: some View {
-        GeometryReader { geo in
-            ZStack{
-                RoundedRectangle(cornerRadius: 2)
-                    .frame(width: 20)
-                    .foregroundColor(Color("secondary_controls"))
-					.shadow(color: Color(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.4)), radius: 3, x: -3, y: -3)
-					.shadow(color: Color(UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.4)), radius: 3, x: 3, y: 3)
-                
-                RoundedRectangle(cornerRadius: 2)
-					.frame(width: 140, height: 35)
-                    .foregroundColor(Color("controls"))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 2)
-                            .frame(width: 103, height: 10)
-                            .foregroundColor(Color("highlight_2"))
-					)
-					.offset(y: self.offset)
-            }
-            .gesture(
-                DragGesture(minimumDistance: 5)
-                    .onChanged { val in
-                        self.shouldRespondToPublisher = false
-                        
-                        if self.controller.isPlaying { self.controller.stop() }
-                        self.offset = val.translation.height + self.previousOffset
-                        
-                        let containingViewHeight = geo.size.height
-                        if self.offset > (containingViewHeight / 2) {
-                            self.offset = containingViewHeight / 2
-                        } else if self.offset < -(containingViewHeight / 2) {
-                            self.offset = -(containingViewHeight / 2)
-                        }
-                        let realValue = (containingViewHeight / 2 + self.offset)
-                        self.sliderValue = abs((realValue / containingViewHeight) - 1)
-                        let bpm = Int(self.sliderValue * CGFloat(self.controller.maxBPM - self.controller.minBPM)) + self.controller.minBPM
-                        
-                        self.controller.setBPM(bpm)
-                }
-                .onEnded { _ in
-                    self.shouldRespondToPublisher = true
-                    self.previousOffset = self.offset
-                    self.controller.prepareBuffer()
-                    if self.controller.isPlaying { self.controller.play() }
-            })
-                .onAppear {
-                    let containingViewHeight = geo.size.height
-                    self.sliderValue = CGFloat(self.controller.bpm - self.controller.minBPM) / CGFloat(self.controller.maxBPM - self.controller.minBPM)
-                    self.offset = -(self.sliderValue * containingViewHeight - (containingViewHeight / 2))
-                    self.previousOffset = self.offset
-            }
-            .onReceive(self.controller.$bpm) { _ in
-                guard self.shouldRespondToPublisher else { return }
-                
-                if self.controller.isPlaying { self.controller.stop() }
-                
-                let containingViewHeight = geo.size.height
-                self.sliderValue = CGFloat(self.controller.bpm - self.controller.minBPM) / CGFloat(self.controller.maxBPM - self.controller.minBPM)
-                self.offset = -(self.sliderValue * containingViewHeight - (containingViewHeight / 2))
-                self.previousOffset = self.offset
-                
-                self.controller.prepareBuffer()
-                if self.controller.isPlaying { self.controller.play() }
-            }
-            
-        }
-    }
+		GeometryReader { geo in
+				ZStack{
+					RoundedRectangle(cornerRadius: 2)
+						.frame(width: 12)
+						.foregroundColor(Color("secondary_controls"))
+						.shadow(color: Color(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.4)), radius: 3, x: -3, y: -3)
+						.shadow(color: Color(UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.4)), radius: 3, x: 3, y: 3)
+					
+					RoundedRectangle(cornerRadius: 2)
+						.frame(width: 130, height: 30)
+						.foregroundColor(Color("controls"))
+						.overlay(
+							RoundedRectangle(cornerRadius: 2)
+								.frame(width: 100, height: 10)
+								.foregroundColor(Color("highlight_2"))
+						)
+						.offset(y: self.offset)
+				}
+				.gesture(
+					DragGesture(minimumDistance: 5)
+						.onChanged { val in
+							self.shouldRespondToPublisher = false
+							
+							if self.controller.isPlaying { self.controller.stop() }
+							self.offset = val.translation.height + self.previousOffset
+							
+							let containingViewHeight = geo.size.height
+							if self.offset > (containingViewHeight / 2) {
+								self.offset = containingViewHeight / 2
+							} else if self.offset < -(containingViewHeight / 2) {
+								self.offset = -(containingViewHeight / 2)
+							}
+							let realValue = (containingViewHeight / 2 + self.offset)
+							self.sliderValue = abs((realValue / containingViewHeight) - 1)
+							let bpm = Int(self.sliderValue * CGFloat(self.controller.maxBPM - self.controller.minBPM)) + self.controller.minBPM
+							
+							self.controller.setBPM(bpm)
+						}
+						.onEnded { _ in
+							self.shouldRespondToPublisher = true
+							self.previousOffset = self.offset
+							self.controller.prepareBuffer()
+							if self.controller.isPlaying { self.controller.play() }
+						})
+				.onAppear {
+					let containingViewHeight = geo.size.height
+					self.sliderValue = CGFloat(self.controller.bpm - self.controller.minBPM) / CGFloat(self.controller.maxBPM - self.controller.minBPM)
+					self.offset = -(self.sliderValue * containingViewHeight - (containingViewHeight / 2))
+					self.previousOffset = self.offset
+				}
+				.onReceive(self.controller.$bpm) { _ in
+					guard self.shouldRespondToPublisher else { return }
+					
+					if self.controller.isPlaying { self.controller.stop() }
+					
+					let containingViewHeight = geo.size.height
+					self.sliderValue = CGFloat(self.controller.bpm - self.controller.minBPM) / CGFloat(self.controller.maxBPM - self.controller.minBPM)
+					self.offset = -(self.sliderValue * containingViewHeight - (containingViewHeight / 2))
+					self.previousOffset = self.offset
+					
+					self.controller.prepareBuffer()
+					if self.controller.isPlaying { self.controller.play() }
+				}
+				
+			}
+		}
+    
 }

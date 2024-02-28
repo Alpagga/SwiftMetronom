@@ -23,19 +23,24 @@ struct ContentView: View {
             ZStack {
                 VStack {
                     TopControlsBar()
-
                     
-                    HStack{
+                    HStack {
+                        Spacer()
                         BPMSlider()
-                            .padding(.horizontal, 135)
+                            .frame(maxWidth: 130)
+                            .padding(.leading, -32.5)
+                            .padding(.trailing, -32.5)
+                        Spacer()
                     }
-
+                        
+                
                     BottomControlsBar()
                         .frame(height: 75)
-                        .padding(.bottom, 15)
-                        .padding(.top, 10)
-                        .padding(.horizontal, 49)
+                        .padding(.bottom, 12)
+                        .padding(.top, 12)
                         .background(Color.black)
+                        .padding(.leading, 0)
+                        .padding(.trailing, 0)
                 }
             }
         }
