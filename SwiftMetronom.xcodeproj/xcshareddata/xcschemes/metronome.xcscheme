@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "384B703023FF304900E22067"
                BuildableName = "Micro Metronome.app"
-               BlueprintName = "metronome"
-               ReferencedContainer = "container:metronome.xcodeproj">
+               BlueprintName = "SwiftMetronom"
+               ReferencedContainer = "container:SwiftMetronomfas.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,8 +46,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "384B703023FF304900E22067"
             BuildableName = "Micro Metronome.app"
-            BlueprintName = "metronome"
-            ReferencedContainer = "container:metronome.xcodeproj">
+            BlueprintName = "SwiftMetronom"
+            ReferencedContainer = "container:SwiftMetronomfas.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "384B703023FF304900E22067"
             BuildableName = "Micro Metronome.app"
-            BlueprintName = "metronome"
-            ReferencedContainer = "container:metronome.xcodeproj">
+            BlueprintName = "SwiftMetronom"
+            ReferencedContainer = "container:SwiftMetronomfas.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

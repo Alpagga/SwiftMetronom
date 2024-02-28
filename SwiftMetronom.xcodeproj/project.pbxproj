@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -229,9 +229,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		384B703023FF304900E22067 /* metronome */ = {
+		384B703023FF304900E22067 /* SwiftMetronom */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 384B704523FF304F00E22067 /* Build configuration list for PBXNativeTarget "metronome" */;
+			buildConfigurationList = 384B704523FF304F00E22067 /* Build configuration list for PBXNativeTarget "SwiftMetronom" */;
 			buildPhases = (
 				384B702D23FF304900E22067 /* Sources */,
 				384B702E23FF304900E22067 /* Frameworks */,
@@ -243,7 +243,7 @@
 			dependencies = (
 				38D71D0B24333B440095BB69 /* PBXTargetDependency */,
 			);
-			name = metronome;
+			name = SwiftMetronom;
 			productName = metronome;
 			productReference = 384B703123FF304900E22067 /* Micro Metronome.app */;
 			productType = "com.apple.product-type.application";
@@ -275,7 +275,7 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1520;
-				ORGANIZATIONNAME = "Jan Kříž";
+				ORGANIZATIONNAME = ThirdEyeOpen;
 				TargetAttributes = {
 					384B703023FF304900E22067 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -286,8 +286,8 @@
 					};
 				};
 			};
-			buildConfigurationList = 384B702C23FF304900E22067 /* Build configuration list for PBXProject "metronome" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 384B702C23FF304900E22067 /* Build configuration list for PBXProject "SwiftMetronomfas" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -299,7 +299,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				384B703023FF304900E22067 /* metronome */,
+				384B703023FF304900E22067 /* SwiftMetronom */,
 				38D71D0424333B440095BB69 /* MetronomeKit */,
 			);
 		};
@@ -514,7 +514,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"metronome/Preview Content\"";
-				DEVELOPMENT_TEAM = E8938J75P7;
+				DEVELOPMENT_TEAM = C7NFAJBY2W;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = metronome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -523,7 +524,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jankriz.micro-metronome";
+				PRODUCT_BUNDLE_IDENTIFIER = Alpagga.SwiftMetronom;
 				PRODUCT_NAME = "Micro Metronome";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -540,7 +541,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"metronome/Preview Content\"";
-				DEVELOPMENT_TEAM = E8938J75P7;
+				DEVELOPMENT_TEAM = C7NFAJBY2W;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = metronome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -549,7 +551,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jankriz.micro-metronome";
+				PRODUCT_BUNDLE_IDENTIFIER = Alpagga.SwiftMetronom;
 				PRODUCT_NAME = "Micro Metronome";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -625,7 +627,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		384B702C23FF304900E22067 /* Build configuration list for PBXProject "metronome" */ = {
+		384B702C23FF304900E22067 /* Build configuration list for PBXProject "SwiftMetronomfas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				384B704323FF304F00E22067 /* Debug */,
@@ -634,7 +636,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		384B704523FF304F00E22067 /* Build configuration list for PBXNativeTarget "metronome" */ = {
+		384B704523FF304F00E22067 /* Build configuration list for PBXNativeTarget "SwiftMetronom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				384B704623FF304F00E22067 /* Debug */,
