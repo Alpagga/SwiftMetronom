@@ -1,11 +1,3 @@
-//
-//  BottomControlsBar.swift
-//  metronome
-//
-//  Created by Jan Kříž on 22/02/2020.
-//  Copyright © 2020 Jan Kříž. All rights reserved.
-//
-
 import SwiftUI
 
 @available(iOS 16.0, *)

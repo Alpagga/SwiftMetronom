@@ -12,7 +12,7 @@ class UIVideoPlayer: UIView {
         
         //guard let url = URL(string: "https://github.com/bbmvicomte/videoOnboardingScreen/blob/master/bounce.mp4?raw=true") else { return }
         
-        if let url = Bundle.main.url(forResource: "test", withExtension: "mp4") {
+        if let url = Bundle.main.url(forResource: "wallpaper", withExtension: "mp4") {
                     let player = AVPlayer(url: url)
                     player.isMuted = true
                     player.play()

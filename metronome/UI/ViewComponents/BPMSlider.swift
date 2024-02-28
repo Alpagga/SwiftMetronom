@@ -19,17 +19,19 @@ struct BPMSlider: View {
         GeometryReader { geo in
             ZStack{
                 RoundedRectangle(cornerRadius: 2)
-                    .frame(width: 15)
+                    .frame(width: 20)
                     .foregroundColor(Color("secondary_controls"))
+					.shadow(color: Color(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.4)), radius: 3, x: -3, y: -3)
+					.shadow(color: Color(UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.4)), radius: 3, x: 3, y: 3)
                 
-                RoundedRectangle(cornerRadius: 5)
-					.frame(width: 120, height: 35)
+                RoundedRectangle(cornerRadius: 2)
+					.frame(width: 140, height: 35)
                     .foregroundColor(Color("controls"))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 3)
+                        RoundedRectangle(cornerRadius: 2)
                             .frame(width: 103, height: 10)
                             .foregroundColor(Color("highlight_2"))
-                )
+					)
 					.offset(y: self.offset)
             }
             .gesture(

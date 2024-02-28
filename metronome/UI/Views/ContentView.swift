@@ -16,16 +16,18 @@ struct ContentView: View {
 //                    .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
                 
         GeometryReader {geo in
+            PlayerView()
+                .edgesIgnoringSafeArea(.all)
+                .transition(.move(edge: .top))
+            
             ZStack {
-                PlayerView()
-                
                 VStack {
                     TopControlsBar()
 
                     
                     HStack{
                         BPMSlider()
-                            .padding(.horizontal, 140)
+                            .padding(.horizontal, 135)
                     }
 
                     BottomControlsBar()

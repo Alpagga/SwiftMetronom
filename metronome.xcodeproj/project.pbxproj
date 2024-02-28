@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		1DADE68E2B8F213600CC1235 /* LAUGH!.aif in Resources */ = {isa = PBXBuildFile; fileRef = 38A08156242124E6000537D7 /* LAUGH!.aif */; };
 		1DADE6922B8F2B5300CC1235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B703823FF304900E22067 /* ContentView.swift */; };
-		1DADE6982B8F67DD00CC1235 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1DADE6972B8F67DD00CC1235 /* background.jpeg */; };
-		1DADE69A2B8F88AB00CC1235 /* wallpaper_mov.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1DADE6992B8F88AB00CC1235 /* wallpaper_mov.mov */; };
 		1DADE69C2B8F8FF800CC1235 /* UIPlyayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DADE69B2B8F8FF800CC1235 /* UIPlyayerView.swift */; };
 		1DADE69E2B8F904F00CC1235 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DADE69D2B8F904F00CC1235 /* PlayerView.swift */; };
-		1DADE6A02B8F963A00CC1235 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1DADE69F2B8F963900CC1235 /* test.mp4 */; };
+		1DADE6A02B8F963A00CC1235 /* wallpaper.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1DADE69F2B8F963900CC1235 /* wallpaper.mp4 */; };
 		38074ABA240BE7D600748945 /* MasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38074AB9240BE7D600748945 /* MasterController.swift */; };
 		380DD40E2426093500B789FD /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380DD40D2426093500B789FD /* CustomButtonStyle.swift */; };
 		381BAEA6241FC07F00CA8720 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381BAEA5241FC07F00CA8720 /* SettingsView.swift */; };
@@ -64,12 +62,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1DADE6952B8F66E800CC1235 /* F53D6306-7D1D-4C31-9499-0F9A43989A20_1_105_c.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "F53D6306-7D1D-4C31-9499-0F9A43989A20_1_105_c.jpeg"; sourceTree = "<group>"; };
-		1DADE6972B8F67DD00CC1235 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
-		1DADE6992B8F88AB00CC1235 /* wallpaper_mov.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = wallpaper_mov.mov; sourceTree = "<group>"; };
 		1DADE69B2B8F8FF800CC1235 /* UIPlyayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPlyayerView.swift; sourceTree = "<group>"; };
 		1DADE69D2B8F904F00CC1235 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
-		1DADE69F2B8F963900CC1235 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		1DADE69F2B8F963900CC1235 /* wallpaper.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = wallpaper.mp4; sourceTree = "<group>"; };
 		38074AB9240BE7D600748945 /* MasterController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = MasterController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		380DD40D2426093500B789FD /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		381BAEA5241FC07F00CA8720 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; usesTabs = 1; };
@@ -119,15 +114,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1DADE6962B8F66F000CC1235 /* static */ = {
-			isa = PBXGroup;
-			children = (
-				1DADE6972B8F67DD00CC1235 /* background.jpeg */,
-				1DADE6952B8F66E800CC1235 /* F53D6306-7D1D-4C31-9499-0F9A43989A20_1_105_c.jpeg */,
-			);
-			path = static;
-			sourceTree = "<group>";
-		};
 		380DD40F2426096C00B789FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +126,7 @@
 		380DD4102426097C00B789FD /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				1DADE69F2B8F963900CC1235 /* test.mp4 */,
-				1DADE6992B8F88AB00CC1235 /* wallpaper_mov.mov */,
+				1DADE69F2B8F963900CC1235 /* wallpaper.mp4 */,
 				3820F0E12401BE3800FE8EF8 /* BPMSlider.swift */,
 				38C35F592423C38800343745 /* TopControlsBar.swift */,
 				38A163C0241FB3AC00276606 /* BottomControlsBar.swift */,
@@ -181,7 +166,6 @@
 			children = (
 				384B703323FF304900E22067 /* metronome */,
 				38D71D0624333B440095BB69 /* MetronomeKit */,
-				1DADE6962B8F66F000CC1235 /* static */,
 				384B703223FF304900E22067 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -333,7 +317,7 @@
 				3853BBB9244359FE006EE52E /* Rimshot.aif in Resources */,
 				3853BBB5244359DD006EE52E /* Mechanical metronome - High.aif in Resources */,
 				384B703E23FF304F00E22067 /* Preview Assets.xcassets in Resources */,
-				1DADE6A02B8F963A00CC1235 /* test.mp4 in Resources */,
+				1DADE6A02B8F963A00CC1235 /* wallpaper.mp4 in Resources */,
 				3853BBB7244359EC006EE52E /* Hi-hat.aif in Resources */,
 				384B703B23FF304F00E22067 /* Assets.xcassets in Resources */,
 				38A08166242124E6000537D7 /* Jack slap.aif in Resources */,
@@ -345,8 +329,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DADE6982B8F67DD00CC1235 /* background.jpeg in Resources */,
-				1DADE69A2B8F88AB00CC1235 /* wallpaper_mov.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
