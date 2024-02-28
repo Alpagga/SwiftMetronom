@@ -1,4 +1,5 @@
 import SwiftUI
+import AVKit
 
 @available(iOS 16.0, *)
 struct ContentView: View {
@@ -6,13 +7,17 @@ struct ContentView: View {
     @EnvironmentObject var controller: MasterController
     
     var body: some View {
+//        GeometryReader {geo in
+//            ZStack {
+//                Image("wallpaper_mov")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .edgesIgnoringSafeArea(.all)
+//                    .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
+                
         GeometryReader {geo in
             ZStack {
-                Image("wallpaper")
-                    .resizable()
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
-                    .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
+                PlayerView()
                 
                 VStack {
                     TopControlsBar()
@@ -25,11 +30,13 @@ struct ContentView: View {
 
                     BottomControlsBar()
                         .frame(height: 75)
-                        .padding(.bottom, 25)
-                        .padding(.top, 20)
-                        .padding(.horizontal, 35)
+                        .padding(.bottom, 15)
+                        .padding(.top, 10)
+                        .padding(.horizontal, 49)
+                        .background(Color.black)
                 }
             }
         }
     }
 }
+

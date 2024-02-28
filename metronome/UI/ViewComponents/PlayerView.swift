@@ -1,9 +1,18 @@
-//
-//  PlayerView.swift
-//  metronome
-//
-//  Created by Lukas Schmid on 28.02.24.
-//  Copyright © 2024 Jan Kříž. All rights reserved.
-//
+import SwiftUI
 
-import Foundation
+struct PlayerView: UIViewRepresentable {
+    
+    func makeUIView(context: Context) -> UIVideoPlayer {
+        return UIVideoPlayer()
+    }
+    
+    func updateUIView(_ uiView: UIVideoPlayer, context: Context) {
+        
+    }
+}
+
+struct PlayerView_Previews: PreviewProvider {
+    static var previews: some View {
+        PlayerView()
+    }
+}
